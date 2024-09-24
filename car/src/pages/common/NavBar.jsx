@@ -1,9 +1,10 @@
 import { FaBarsStaggered } from "react-icons/fa6";
+import { BsCartPlus } from "react-icons/bs";
 
-const NavBar = ({fnc}) => {
+const NavBar = ({fnc, fnc1}) => {
 
   return (
-    <header className='flex bg-violet-500 max-h-[4rem] h-full shadow-2xl items-center px-8 justify-between'>
+    <header className='flex relative bg-violet-500 max-h-[4rem] h-full shadow-2xl items-center px-8 justify-between'>
       <div className='py-4 px-6 font-thin tracking-tighter hidden md:block hover:cursor-pointer hover:text-xl transition-all duration-500 transform ease-in-out'>
         <span className='text-white'>Cars</span>
         <span className='text-yellow-500'>Market</span>
@@ -23,6 +24,10 @@ const NavBar = ({fnc}) => {
           <img src="" alt="" />
           <span className='border-2 rounded-lg px-3 py-1.5 tracking-tighter hover:border-yellow-500 hover:cursor-pointer'>+78 235 89 99</span>
         </p>
+      </nav>
+
+      <nav className="flex border-2 rounded-full p-1.5 hover:border-yellow-500 absolute md:relative md:right-2 right-20 mx-2" onClick={fnc1}>
+        <BsCartPlus color="white"/>
       </nav>
 
       <nav className='flex md:hidden border-2 rounded-full p-1.5 hover:border-yellow-500' onClick={fnc}>
